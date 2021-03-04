@@ -21,13 +21,13 @@ public class ItemProduto {
 	@GeneratedValue
 	private Long id;
 	
-	@Column()
+	@Column
 	private Produto produto;
 	
-	@Column()
+	@Column
 	private Pedido pedido;
 	
-	@Column()
+	@Column
 	private int cancelado;
 
 	public Long getId() {

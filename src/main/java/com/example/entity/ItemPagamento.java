@@ -21,13 +21,13 @@ public class ItemPagamento {
 	@GeneratedValue
 	private Long id;
 	
-	@Column()
+	@Column
 	private MeioPagamento meioPagamento;
 	
-	@Column()
+	@Column
 	private Pedido pedido;
 	
-	@Column()
+	@Column
 	private Double valor;
 
 	public Long getId() {

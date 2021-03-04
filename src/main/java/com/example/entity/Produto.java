@@ -24,13 +24,13 @@ public class Produto {
 	@Column(length = 60)
 	private String nome;
 	
-	@Column()
+	@Column
 	private int valor;
 	
-	@Column()
+	@Column
 	private int quantidade;
 	
-	@Column()
+	@Column
 	private UnidadeMedida unidadeMedida;
 
 	public Long getId() {

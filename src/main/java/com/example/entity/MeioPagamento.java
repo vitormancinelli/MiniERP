@@ -24,7 +24,7 @@ public class MeioPagamento {
 	@Column(length = 60)
 	private String nome;
 	
-	@Column()
+	@Column
 	private TipoMoeda tipoMoeda;
 
 	public Long getId() {
