@@ -12,8 +12,9 @@ public class Cliente {
 
 	public Cliente() {}
 	
-	public Cliente(String nome) {
+	public Cliente(String nome, int cpf) {
 		this.nome = nome;
+		this.cpf = cpf;
 	}
 	
 	@Id
@@ -24,7 +25,7 @@ public class Cliente {
 	private String nome;
 	
 	@Column(length = 11)
-	private String cpf;
+	private int cpf;
 
 	public Long getId() {
 		return id;
