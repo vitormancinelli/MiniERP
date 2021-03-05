@@ -102,7 +102,7 @@ public class ItemPagamentoDaoJpa implements ItemPagamentoDao {
 	
 	@Override
 	@SuppressWarnings("unchecked")
-	public List<ItemPagamento> findAll() {
+	public List<ItemPagamento> findAll() throws Exception {
 		try {
 			return entityManager.createQuery("FROM " + ItemPagamento.class.getName()).getResultList();
 		} catch(Exception e) {
