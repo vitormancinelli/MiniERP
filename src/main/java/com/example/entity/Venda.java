@@ -2,6 +2,8 @@ package com.example.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
@@ -9,6 +11,10 @@ import javax.persistence.Table;
 public class Venda {
 	
 	public Venda() {}
+	
+	@Id
+	@GeneratedValue
+	private Long id;
 	
 	@Column
 	private Cliente cliente;
@@ -21,6 +27,14 @@ public class Venda {
 	
 	@Column
 	private String justificativa;
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
 
 	public int getCancelado() {
 		return cancelado;
