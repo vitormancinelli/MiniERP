@@ -26,5 +26,15 @@ public class ClienteController {
 			throw new ResponseStatusException(HttpStatus.BAD_REQUEST, e.getMessage());
 		}
 	}
-
+	
+	@GetMapping("/cliente/count")
+	long count() {
+		try {
+			return clienteService.count();
+		} catch(Exception e) {
+			e.printStackTrace();
+			throw new ResponseStatusException(HttpStatus.BAD_REQUEST, e.getMessage());
+		}
+	}
+	
 }
