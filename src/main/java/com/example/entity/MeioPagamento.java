@@ -8,7 +8,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "MeioPagamento")
+@Table(name = "meio_pagamento")
 public class MeioPagamento {
 
 	public MeioPagamento() {}
@@ -23,10 +23,10 @@ public class MeioPagamento {
 	@Column
 	private Long id;
 	
-	@Column(length = 60)
+	@Column(name = "nome", length = 60)
 	private String nome;
 	
-	@Column
+	@Column(name = "tipo_moeda")
 	private TipoMoeda tipoMoeda;
 
 	public Long getId() {

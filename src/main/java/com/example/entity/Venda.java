@@ -8,7 +8,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "Venda")
+@Table(name = "venda")
 public class Venda {
 	
 	public Venda() {}
@@ -18,16 +18,16 @@ public class Venda {
 	@Column
 	private Long id;
 	
-	@Column
+	@Column(name = "cliente")
 	private Cliente cliente;
 	
-	@Column
+	@Column(name = "pedido")
 	private Pedido pedido;
 	
-	@Column
+	@Column(name = "cancelado")
 	private int cancelado;
 	
-	@Column
+	@Column(name = "justificativa", length = 60)
 	private String justificativa;
 
 	public Long getId() {

@@ -8,7 +8,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "UnidadeMedida")
+@Table(name = "unidade_medida")
 public class UnidadeMedida {
 	
 	public UnidadeMedida() {}
@@ -22,10 +22,10 @@ public class UnidadeMedida {
 	@Column
 	private Long id;
 
-	@Column(length = 60)
+	@Column(name = "nome", length = 60)
 	private String nome;
 	
-	@Column(length = 60)
+	@Column(name = "abreviacao", length = 60)
 	private String abreviacao;
 
 	public Long getId() {

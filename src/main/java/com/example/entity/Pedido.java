@@ -12,7 +12,7 @@ import javax.persistence.Table;
 import javax.persistence.Transient;
 
 @Entity
-@Table(name = "Pedido")
+@Table(name = "pedido")
 public class Pedido {
 	
 	public Pedido() {}
@@ -21,9 +21,6 @@ public class Pedido {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column
 	private Long id;
-	
-	@Column
-	private int numeroPedido;
 	
 	@Transient
 	private List<ItemPagamento> listaPagamento;
@@ -37,30 +34,6 @@ public class Pedido {
 
 	public void setId(Long id) {
 		this.id = id;
-	}
-
-	public int getNumeroPedido() {
-		return numeroPedido;
-	}
-
-	public void setNumeroPedido(int numeroPedido) {
-		this.numeroPedido = numeroPedido;
-	}
-
-	public String getJustificativaCancelamento() {
-		return justificativaCancelamento;
-	}
-
-	public void setJustificativaCancelamento(String justificativaCancelamento) {
-		this.justificativaCancelamento = justificativaCancelamento;
-	}
-
-	public int getCancelado() {
-		return cancelado;
-	}
-
-	public void setCancelado(int cancelado) {
-		this.cancelado = cancelado;
 	}
 
 	public List<ItemPagamento> getListaPagamento() {

@@ -23,14 +23,17 @@ public class ItemProduto {
 	@Column
 	private Long id;
 	
-	@Column
+	@Column(name = "produto")
 	private Produto produto;
 	
-	@Column
+	@Column(name = "pedido")
 	private Pedido pedido;
 	
-	@Column
+	@Column(name = "cancelado")
 	private int cancelado;
+	
+	@Column(name = "justificativa", length = 60)
+	private String justificativa;
 
 	public Long getId() {
 		return id;

@@ -8,7 +8,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "ItemPagamento")
+@Table(name = "item_pagamento")
 public class ItemPagamento {
 	
 	public ItemPagamento() {}
@@ -23,13 +23,13 @@ public class ItemPagamento {
 	@Column
 	private Long id;
 	
-	@Column
+	@Column(name = "meio_pagamento")
 	private MeioPagamento meioPagamento;
 	
-	@Column
+	@Column(name = "pedido")
 	private Pedido pedido;
 	
-	@Column
+	@Column(name = "valor")
 	private Double valor;
 
 	public Long getId() {
